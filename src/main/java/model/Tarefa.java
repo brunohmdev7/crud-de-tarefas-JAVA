@@ -8,7 +8,6 @@ public class Tarefa {
     private UUID id;
     private String descricao;
     private boolean concluida;
-    public List<Tarefa> tarefas =  new ArrayList<Tarefa>();
 
     public UUID getId() {
         return id;
@@ -38,20 +37,5 @@ public class Tarefa {
         this.id = UUID.randomUUID();
         this.descricao = descricao;
         this.concluida = concluida;
-    }
-
-    public List<Tarefa> getTarefas() {
-        return tarefas;
-    }
-
-    public void criarTarefa(String descricao) {
-        try {
-            Tarefa tarefa = new Tarefa();
-            tarefa.setDescricao(descricao);
-            tarefas.add(tarefa);
-            System.out.println("✅ Tarefa criada com sucesso!");
-        } catch (Exception e) {
-            System.out.println("❌ Erro ao criar tarefa!");
-        }
     }
 }
