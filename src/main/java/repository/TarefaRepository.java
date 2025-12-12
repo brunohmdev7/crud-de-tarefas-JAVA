@@ -22,4 +22,16 @@ public class TarefaRepository {
             System.out.println("❌ Erro ao criar tarefa!");
         }
     }
+
+    public void listarTarefas() {
+        System.out.println("========================");
+        System.out.println("=== LISTA DE TAREFAS ===");
+        System.out.println("========================\n");
+        for (int i = 0 ; i  < tarefas.size() ; i++) {
+            System.out.println("Tarefa " + (i + 1));
+            System.out.println(tarefas.get(i).getDescricao());
+            System.out.println(tarefas.get(i).isConcluida());
+            System.out.println("========================\n");
+        }
+    }
 }
