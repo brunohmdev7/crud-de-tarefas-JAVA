@@ -120,4 +120,14 @@ public class TarefaRepository {
             System.out.println("Não há nenhuma tarefa não concluída no momento!\n");
         }
     }
+
+    public void exibirMenu() {
+        System.out.println("=== MENU DE TAREFAS ===");
+        System.out.println("Digite 1 para adicionar novo tarefa");
+        System.out.println("Digite 2 para listar todas as tarefas");
+        System.out.println("Digite 3 para atualizar a descrição de uma tarefa");
+        System.out.println("Digite 4 para concluir uma tarefa");
+        System.out.println("Digite 5 para excluir uma tarefa");
+        System.out.println("Digite -1 para encerrar o programa");
+    }
 }
