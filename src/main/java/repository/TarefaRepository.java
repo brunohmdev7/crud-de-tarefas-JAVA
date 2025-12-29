@@ -131,4 +131,10 @@ public class TarefaRepository {
         System.out.println("Digite 5 para excluir uma tarefa");
         System.out.println("Digite -1 para encerrar o programa\n");
     }
+
+    public void retornarAoMenu() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite qualquer tecla para retornar ao menu");
+        sc.nextLine();
+    }
 }

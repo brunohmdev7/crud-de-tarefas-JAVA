@@ -18,7 +18,26 @@ public class Main {
                     System.out.println("Descreva sua tarefa: ");
                     String descricao = teclado.nextLine();
                     tarefaRepo.criarTarefa(descricao);
-                    System.out.flush();
+                    break;
+                case "2":
+                    tarefaRepo.listarTarefas();
+                    tarefaRepo.retornarAoMenu();
+                    break;
+                case "3":
+                    System.out.println("Digite a posição que deseja atualizar:");
+                    int posicao = teclado.nextInt();
+                    posicao -= 1;
+                    teclado.nextLine(); // limpa o "\n" do nextInt();
+                    System.out.println("Descreva sua nova tarefa: ");
+                    String descricaoNova = teclado.nextLine();
+                    tarefaRepo.atualizarDescricao(posicao, descricaoNova);
+                    break;
+                case "4":
+                    System.out.println("Digite a posição que deseja atualizar:");
+                    posicao = teclado.nextInt();
+                    posicao -= 1;
+                    tarefaRepo.marcarConcluida(posicao);
+                    teclado.nextLine();
                     break;
                 case "-1":
                     System.out.println("Programa encerrado.");
